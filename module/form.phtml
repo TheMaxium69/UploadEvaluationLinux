@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Upload Evaluation</title>
     <link href="module/tyrolium.png" rel="shortcut icon">
+    <link rel="stylesheet" href="https://unpkg.com/izitoast/dist/css/iziToast.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -56,6 +57,15 @@
             background-color: #2152ee;
         }
     </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="title" content="Upload Evaluation">
+    <meta name="description" content="Upload Evaluation Linux"/>
+    <meta property="og:title" content="Upload Evaluation"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://eval.tyrolium.fr/"/>
+    <meta property="og:image" content="http://eval.tyrolium.fr/module/tyrolium.png"/>
+    <meta property="og:description" content="Upload Evaluation Linux"/>
 </head>
 <body>
     <form method="POST" enctype="multipart/form-data">
@@ -65,7 +75,7 @@
                 <img src="module/tyrolium.png" width="85">
             </div>
         </div>
-        <h1>Envoyé votre évalution</h1>
+        <h1>Envoyé votre évaluation</h1>
 
         <h4>Votre Prénom et Nom</h4>
         <input type="text" name="name" placeholder="Maxime Tournier" required>
@@ -78,5 +88,6 @@
         <input type="submit" value="Envoyé votre évaluation">
 
     </form>
+    <script src="https://unpkg.com/izitoast/dist/js/iziToast.min.js"></script>
 </body>
 </html>

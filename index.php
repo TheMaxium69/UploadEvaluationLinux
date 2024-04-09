@@ -14,7 +14,7 @@ if (isset($_FILES['bashfile']) && isset($_POST['name'])) {
             // Dossier de destination
             $upload_dir = 'C:\Users\mxmto\Developpement\LocalHost\www\UploadEvaluationLinux\uploads/';
             // Nouveau nom de fichier pour éviter les collisions
-            $upload_file = $upload_dir . '_' . $_POST['name'] . '_bash_history-' . uniqid() . '.log';
+            $upload_file = $upload_dir . $_POST['name'] . '_bash_history-' . uniqid() . '.log';
 
             // Déplacer le fichier téléchargé vers le dossier de destination
             if (move_uploaded_file($_FILES["bashfile"]["tmp_name"], $upload_file)) {
@@ -38,13 +38,37 @@ function resultPicture($why, $msg)
 
     if ($why == 1) {
 
-        header("location: ?p=2&true=" . $msg);
+        header("location: ?true=" . $msg);
 
     }
 
     if ($why == 2) {
 
-        header("location: ?p=2&err=" . $msg);
+        header("location: ?err=" . $msg);
     }
 
 }
+
+if (!empty($_GET['true'])) {?>
+    <script>
+        if(Text != 1){
+            iziToast.success({
+                title: 'Succès',
+                position: 'bottomRight',
+                message: '<?php echo $_GET['true']; ?>'
+            });
+        }
+    </script>
+<?php } ?>
+
+    <?php if (!empty($_GET['err'])) { ?>
+    <script>
+        if(Text != 1){
+            iziToast.error({
+                title: 'Erreur',
+                position: 'bottomRight',
+                message: ' <?php echo $_GET['err']; ?>'
+            });
+        }
+    </script>
+<?php } ?>
