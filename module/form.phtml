@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Evaluation</title>
+    <link href="module/tyrolium.png" rel="shortcut icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 335px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h4 {
+            margin-top: 20px;
+        }
+
+        input[type="text"],
+        input[type="file"],
+        input[type="submit"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: #0236da;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2152ee;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST" enctype="multipart/form-data">
+
+        <div style="width: 100%">
+            <div style="width: 85px; margin: auto;height: 75px" onclick="window.location.href = 'https://tyrolium.fr';">
+                <img src="module/tyrolium.png" width="85">
+            </div>
+        </div>
+        <h1>Envoyé votre évalution</h1>
+
+        <h4>Votre Prénom et Nom</h4>
+        <input type="text" name="name" placeholder="Maxime Tournier" required>
+        <br>
+
+        <h4>Votre fichier .bash_history</h4>
+        <input type="file" name="bashfile" required>
+        <br>
+
+        <input type="submit" value="Envoyé votre évaluation">
+
+    </form>
+</body>
+</html>
