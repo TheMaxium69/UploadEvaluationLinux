@@ -19,15 +19,15 @@ if (isset($_FILES['bashfile']) && isset($_POST['name'])) {
             // Déplacer le fichier téléchargé vers le dossier de destination
             if (move_uploaded_file($_FILES["bashfile"]["tmp_name"], $upload_file)) {
 
-                resultPicture(1, "Votre Fichier à bien été envoyé.");
+                resultPicture(1, "Votre fichier à bien été envoyé.");
 
 
             } else {
-                resultPicture(2, "Une erreur s'est produite lors du déplacement du fichier vers le dossier de destination.");
+                resultPicture(2, "une erreur s est produite lors du deplacement du fichier vers le dossier de destination.");
             }
 
         } else {
-            resultPicture(2, "La taille du fichier dépasse la limite autorisée de 9 Mo.");
+            resultPicture(2, "La taille du fichier depasse la limite autorisée de 9 Mo.");
         }
 
 
